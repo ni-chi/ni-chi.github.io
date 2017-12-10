@@ -448,9 +448,26 @@
                             <input type="submit" value="Send">
                         </form>
                     </div>
-                    <div class="col-md-6 map">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDQ50sBOK77R1dH8FzOeNTtomJmvdnZypI&q=NITK+Beach,Surathkal,Mangalore"></iframe>
-                    </div>
+                    
+<div id="googleMap" style="width:500px;height:500px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(13.0108,74.7943),
+    zoom:15
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var mark=new google.maps.LatLng(13.0108,74.7943);
+var marker=new google.maps.Marker({position:mark,animation:google.maps.Animation.BOUNCE});
+marker.setMap(map);
+
+
+}
+</script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyD8kBj8L-JybifPIahldiIvhptk8dYt_Y4 &callback=myMap"></script>
                     <div class="clearfix"> </div>
                 </div>
             </div>
